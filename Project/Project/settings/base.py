@@ -38,15 +38,14 @@ SECRET_KEY = get_secret("SECRET_KEY")
 '''
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '&hl&jgsxb+sz$-gsqyd+h1+%ko00repo2e6v=u-pimd-y!=-9p'
 
 
 ########## DEBUG CONFIGURATION
 # Disable debugging by default.
-DEBUG = False
-TEMPLATE_DEBUG = DEBUG
+DEBUG = True
 ########## END DEBUG CONFIGURATION
 
 
