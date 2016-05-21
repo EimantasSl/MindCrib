@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+
+
+'''
 import json
 
 # Normally you should not import ANYTHING from Django directly
@@ -19,11 +22,8 @@ from django.core.exceptions import ImproperlyConfigured
 # JSON-based secrets module
 
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-with open(os.path.join(BASE_DIR, 'settings/secrets.json')) as f:
+with open(os.path.join(BASE_DIR, 'secrets.json')) as f:
     secrets = json.loads(f.read())
 
 def get_secret(setting, secrets=secrets):
@@ -35,11 +35,12 @@ def get_secret(setting, secrets=secrets):
         raise ImproperlyConfigured(error_msg)
 
 SECRET_KEY = get_secret("SECRET_KEY")
+'''
 
-
-
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = '&hl&jgsxb+sz$-gsqyd+h1+%ko00repo2e6v=u-pimd-y!=-9p'
+SECRET_KEY = '&hl&jgsxb+sz$-gsqyd+h1+%ko00repo2e6v=u-pimd-y!=-9p'
 
 
 ########## DEBUG CONFIGURATION
