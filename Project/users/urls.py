@@ -6,6 +6,6 @@ app_name = 'users'
 
 urlpatterns = [
     url(r'^profile/$', views.ProfileDetailView.as_view(), name='my-profile'),
-    url(r'^profile/update/$', views.ProfileUpdateView.as_view(), name='profile-update'),
+    url(r'^profile/update/(?P<pk>[0-9]+)$', views.ProfileUpdateView.as_view(), name='profile-update'),
     url(r'^profile/(?P<username>\w+)$', views.ProfileDetailView.as_view(), name='profile'),
 ]

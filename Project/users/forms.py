@@ -12,4 +12,4 @@ class UserForm(ModelForm):
         fields = ['email']
 
 
-UserProfilesFormSet = inlineformset_factory(User, UserProfile, fields=('bio', 'phone', 'website'), extra=2, can_delete=False)
+UserProfilesFormSet = inlineformset_factory(User, UserProfile, fields=('bio', 'phone', 'website'), can_delete=False)
