@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-    Home
+    {% load account %}
+
+    {% user_display user as user_display %}
+    {% if user_display %}
+        logged in as {{ user_display }}<br/>
+        <a href="{% url 'users:my-profile' %}">Profile</a><br/>
+        <a href="{% url 'account_logout' %}">Logout</a>
+    {% else %}
+        <a href="{% url 'account_login' %}">Login</a><br/>
+        <a href="{% url 'account_signup' %}">Sign-up</a>
+    {% endif %}
 </body>
 </html>

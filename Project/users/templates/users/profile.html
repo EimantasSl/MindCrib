@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load account %}
+
+
+{% block content %}
+
+    <h3>{% user_display user %} Profile</h3>
+
+    Bio: {{ profile.bio }}<br/>
+    Website: {{ profile.website }}<br/>
+    Email: {{ profile.user.email }}<br/>
+    Phone: {{ profile.phone }}<br/>
+    <br/>
+    <a href="{% url 'users:profile-update' %}">Edit</a>
+
+
+
+{% endblock %}
